@@ -125,15 +125,16 @@ function createDownloadLink(blob) {
 	au.controls = true;
 	au.src = url;
     var li = document.createElement('div');
-	var upload=document.createElement('button')
-  upload.className+="text-lg m-5 px-10 text-bold hover:bg-red-700  py-2 b-2 bg-green-500 rounded-xl disabled:bg-slate-600 disabled:text-gray-500 ";
+	var upload=document.createElement('button');
+	upload.className+="text-lg m-5 px-10 text-bold hover:bg-red-700  py-2 b-2 bg-green-500 rounded-xl disabled:bg-slate-600 disabled:text-gray-500 ";
+	li.setAttribute('align','center');
 	//upload link
 	li.setAttribute('align','center');
     li.appendChild(au);
 	upload.addEventListener("click", function(event){
 		  console.log("Called")
-      wait.innerText="Loading Result...";
-      upload.disabled=true;
+		  wait.innerText="Loading Result...";
+		  upload.disabled=true;
 		  var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
 		      if(this.readyState === 4) {
@@ -142,8 +143,8 @@ function createDownloadLink(blob) {
 				  recordButton.disabled = false;
 				  recordingsList.innerHTML=""
 				  upload.innerHTML="";
-          upload.className="";
-          wait.innerText="";
+				  upload.className="";
+				  wait.innerText="";
 		      }
 		  };
 		  var fd=new FormData();
@@ -153,12 +154,14 @@ function createDownloadLink(blob) {
 		  xhr.send(fd);
 		  recordButton.disabled=true;
 	})
-  recordingsList.innerHTML="";
+	recordingsList.innerHTML="";
 	uploadarea.innerHTML="";
 	li.appendChild(document.createTextNode (" "))//add a space in between
 	upload.innerHTML="Upload"
 	uploadarea.appendChild(upload)
 
 	//add the li element to the ol
+	
 	recordingsList.appendChild(li);
+	
 }
