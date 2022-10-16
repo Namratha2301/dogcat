@@ -126,6 +126,7 @@ function createDownloadLink(blob) {
 	au.src = url;
     var li = document.createElement('div');
 	var upload=document.createElement('button')
+  upload.className+="text-lg m-5 px-10 text-bold hover:bg-red-700  py-2 b-2 bg-green-500 rounded-xl disabled:bg-slate-600 disabled:text-gray-500 ";
 	//upload link
 	li.setAttribute('align','center');
     li.appendChild(au);
