@@ -127,6 +127,7 @@ function createDownloadLink(blob) {
     var li = document.createElement('div');
 	var upload=document.createElement('button')
 	//upload link
+	li.setAttribute('align','center');
     li.appendChild(au);
 	upload.addEventListener("click", function(event){
 		  console.log("Called")
