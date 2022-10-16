@@ -148,6 +148,8 @@ function createDownloadLink(blob) {
 		  xhr.send(fd);
 		  recordButton.disabled=true;
 	})
+  recordingsList.innerHTML="";
+	uploadarea.innerHTML="";
 	li.appendChild(document.createTextNode (" "))//add a space in between
 	upload.innerHTML="Upload"
 	uploadarea.appendChild(upload)
