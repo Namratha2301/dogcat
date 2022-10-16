@@ -11,9 +11,11 @@ The model has been trained to distinguish dog and cat voices as of now. We are s
 Only about 277 pieces of data points have been made available to train the model. With the limited amount of data there was trouble training the model as we were not able to acheive the required score on the validation dataset. Despite all these issues here are some of the challenges and information about the model:
 
 - Class Imbalance
+  
+  <img src="./imgs/classimbalance.png" alt="">
 
 - High Variance (Overfitting)
-
+  <img src="./imgs/overfitting.png" alt="">
 
 
 # Link to Model Training Colab Notebook
