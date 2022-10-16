@@ -133,6 +133,7 @@ function createDownloadLink(blob) {
 	upload.addEventListener("click", function(event){
 		  console.log("Called")
       wait.innerText="Loading Result...";
+      upload.disabled=true;
 		  var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
 		      if(this.readyState === 4) {
