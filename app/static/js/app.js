@@ -139,7 +139,8 @@ function createDownloadLink(blob) {
 				  result.innerText="Animal:"+e.target.responseText;
 				  recordButton.disabled = false;
 				  recordingsList.innerHTML=""
-				  upload.innerHTML=""
+				  upload.innerHTML="";
+          upload.className="";
 		      }
 		  };
 		  var fd=new FormData();
