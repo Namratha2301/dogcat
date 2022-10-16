@@ -132,6 +132,7 @@ function createDownloadLink(blob) {
     li.appendChild(au);
 	upload.addEventListener("click", function(event){
 		  console.log("Called")
+      wait.innerText="Loading Result...";
 		  var xhr=new XMLHttpRequest();
 		  xhr.onload=function(e) {
 		      if(this.readyState === 4) {
@@ -141,6 +142,7 @@ function createDownloadLink(blob) {
 				  recordingsList.innerHTML=""
 				  upload.innerHTML="";
           upload.className="";
+          wait.innerText="";
 		      }
 		  };
 		  var fd=new FormData();
