@@ -3,7 +3,7 @@ import librosa
 import numpy as np
 import pandas as pd
 
-model = tf.keras.models.load_model('models')
+model = tf.keras.models.load_model('models/ann')
 
 
 def single_extract_features(file_name):
