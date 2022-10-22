@@ -1,0 +1,3 @@
+apt-get update -y
+apt-get install libsndfile1
+gunicorn --bind=0.0.0.0 --timeout 600 app:app
